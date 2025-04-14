@@ -2,8 +2,8 @@
 //{2, 3, 5, 7, 11}, index = 2, k = 2) -> {3, 5} {5, 7}
 //			 |
 //          
-// k > size то пустой вектор 
-// k < 1 то пустой вектор 
+// k > size С‚Рѕ РїСѓСЃС‚РѕР№ РІРµРєС‚РѕСЂ 
+// k < 1 С‚Рѕ РїСѓСЃС‚РѕР№ РІРµРєС‚РѕСЂ 
 
 #include <vector>
 #include <iostream>
@@ -17,7 +17,7 @@ std::vector<int> find_k_closest(const std::vector<int>& a, size_t index, size_t 
 	std::vector<int> res;
 	res.reserve(k);
 	int count = 0;
-	int n = a.size(); // например индексов до 6 а размер  7
+	int n = a.size(); // РЅР°РїСЂРёРјРµСЂ РёРЅРґРµРєСЃРѕРІ РґРѕ 6 Р° СЂР°Р·РјРµСЂ  7
 	int l = int(index), r = l + 1;
 
 	while (count != k) {
