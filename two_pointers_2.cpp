@@ -50,3 +50,7 @@ int longestSubarray(std::vector<int>& v) {
 	}
 	return ans;
 }
+
+int main() {
+	return 0;
+}
