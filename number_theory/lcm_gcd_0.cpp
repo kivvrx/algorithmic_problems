@@ -1,4 +1,4 @@
-﻿#include <vector>
+#include <vector>
 
 //gcd НОД
 // делимость - a/b = k => если сущесвтует целое k то делится a на b
@@ -38,7 +38,7 @@
 //НОК(12, 18) = 2^2 × 3^2 = 36
 //Проверим формулу :
 //| 12 × 18| / НОД(12, 18) = 216 / 6 = 36
-
+#include <iostream>
 
 int gcd_recursive(int a, int b) {
 	return b == 0? a : gcd_recursive(b, a%b);
@@ -78,6 +78,8 @@ int lcm_vector(const std::vector<int>& numbers) {
 }
 
 int main() {
-	
+	int i,j;
+	std::cin >> i >> j;
+	std::cout << lcm_recursive(i, j);
 	return 0;
 }

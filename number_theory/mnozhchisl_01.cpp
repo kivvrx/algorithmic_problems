@@ -1,4 +1,4 @@
-﻿#include <algorithm>
+#include <algorithm>
 #include <iostream>
 #include <cmath>
 #include <utility>
@@ -71,7 +71,7 @@ void print_abundant(int const limit)
 std::vector<int> prime_factors(int a) {
     std::vector<int> factors;
     while (a % 2 == 0) {
-        factors.push_back(a);
+        factors.push_back(2);
         a = a / 2;
     }
     for (int i = 3; i <= std::sqrt(a); i += 2) {

@@ -1,6 +1,7 @@
 #include <iostream>
 #include <iomanip>
 #include <vector>
+#include <limits>
 int fib(int n) {
     std::vector<int> a(n+1);
     a[0] = a[1] = 1;
@@ -17,6 +18,7 @@ int fib_recursive(int n, std::vector<int>& a) {
 
 
 int main() {
+    std::cout << "min = " << std::numeric_limits<int>::min() << std::endl;
     int max_int = 2147483647;
     double as_double = max_int;
     std::cout << std::scientific << as_double << std::endl;
