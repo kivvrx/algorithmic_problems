@@ -22,7 +22,7 @@ int main() {
     int start;
     cin >> start;
 
-    vector<int> dist(n + 1, -1); // -1 ������ �� ��������
+    vector<int> dist(n + 1, -1); 
     queue<int> q;
 
     dist[start] = 0;

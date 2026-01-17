@@ -10,7 +10,6 @@ void dfs(int v, const vector<vector<int>>& g, vector<bool>& visited, vector<int>
             dfs(to, g, visited, order);
         }
     }
-    // ����� ��� ������� ���������� � ��������� ������� � ������
     order.push_back(v);
 }
 
@@ -37,7 +36,7 @@ int main() {
         }
     }
 
-    reverse(order.begin(), order.end()); // �������������� �������
+    reverse(order.begin(), order.end());
 
     for (int v : order) {
         cout << v << " ";

@@ -19,8 +19,7 @@ using namespace std;
 1 2
 3
 */
-// ������� ������ ������� � ���� �� �� ������� ����� ������ � ������ ���� ����� ��� ������� � ���� 
-// ����� ��� �� ��� ������� 
+
 void dfs(int v, const vector<vector<int>>& g, vector<bool>& visited) {
     visited[v] = true;
     cout << v << " ";

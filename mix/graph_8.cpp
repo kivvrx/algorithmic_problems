@@ -18,27 +18,23 @@ int main() {
     }
 
     int N = 1 << n;
-    const int START = 0; // ������� 1 -> ������ 0
+    const int START = 0;
     const int INF_NEG = -1e9;
 
-    // dp[mask][v] = ������������ ����� ��� ����, ������� ���������� � START � ������������� � v, ������� mask
-    // �������������� -inf
+    
     vector<vector<int>> dp(N, vector<int>(n, INF_NEG));
     dp[1 << START][START] = a[START];
 
     int ans = a[START];
 
-    // ��������� ������ �����, ���������� START
     for (int mask = 0; mask < N; ++mask) {
-        if (((mask >> START) & 1) == 0) continue; // ����� ������ ��������� �����
+        if (((mask >> START) & 1) == 0) continue; 
         for (int v = 0; v < n; ++v) {
             int cur = dp[mask][v];
             if (cur == INF_NEG) continue;
-            // ��������� �����
             ans = max(ans, cur);
-            // ������� ��������� ���� � �������
             for (int u : adj[v]) {
-                if ((mask >> u) & 1) continue; // u ��� �������
+                if ((mask >> u) & 1) continue; 
                 int nmask = mask | (1 << u);
                 dp[nmask][u] = max(dp[nmask][u], cur + a[u]);
             }

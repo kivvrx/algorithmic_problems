@@ -32,7 +32,7 @@ int main() {
         int u, v;
         cin >> u >> v;
         g[u].push_back(v);
-        gt[v].push_back(u); // ����������������� ����
+        gt[v].push_back(u);
     }
 
     used.assign(n + 1, false);

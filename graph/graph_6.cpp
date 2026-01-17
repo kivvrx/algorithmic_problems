@@ -17,7 +17,6 @@ int main() {
     for (int i = 0; i < m; ++i) {
         int u, v;
         cin >> u >> v;
-        // ����������������� ����: ��������� ��� �����������
         adj[u].push_back(v);
         adj[v].push_back(u);
     }
@@ -35,7 +34,7 @@ int main() {
         int v = q.front();
         q.pop();
 
-        if (v == t) break; // ������ �����, t ����������
+        if (v == t) break;
 
         for (int to : adj[v]) {
             if (dist[to] == -1) {
