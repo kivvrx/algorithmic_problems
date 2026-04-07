@@ -12,13 +12,11 @@
 using namespace std;
 
 struct TNode {
-	 char Value; // [A-Z]
+	 char Value;
 	 TNode * left;
 	 TNode * right;
 	
 };
-
-
 
  int Go(TNode * root, map<int, pair<TNode*, TNode*>> &st) {
 	 if (root == NULL) return 0;
@@ -34,11 +32,10 @@ struct TNode {
 //		    z → 122
 //			A → 65
 //			Z → 90
-		 // get the answer for child nodes
 		 ans |= Go(root->left, st); //    a  ans =  ans | (Go(root->left, st) -> Go(адрес a,st) -> 0 ) 
 	     ans |= Go(root->right, st);  // c  ans =  ans | (Go(root->right, st) -> )
 	
-		 // update the answer for current mask
+
 		 if (st[ans].first == NULL) st[ans].first = root;
 	     else if (st[ans].second == NULL) st[ans].second = root;
 	
@@ -50,7 +47,6 @@ struct TNode {
 	 map<int, pair<TNode*, TNode*>> st;
 	 int res = Go(root, st);
 	
-		 // find & return the answer
 		 pair<TNode*, TNode*> ans;
 	 for (auto& x : st) {
 		 if (x.second.first != NULL && x.second.second != NULL) {
