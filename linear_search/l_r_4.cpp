@@ -3,7 +3,6 @@
 #include <string>
 using namespace std;
 
-
 int leng (const vector<int>&  nums){
     int sz = int( nums.size());
     if (sz == 0) return 0;
